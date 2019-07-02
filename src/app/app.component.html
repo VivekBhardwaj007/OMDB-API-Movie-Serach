@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<app-registration></app-registration> -->
+<nav>
+    <div class="nav-wrapper">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a [routerLink]="['/dashboard']">Dashboard</a></li>
+            <li><a [routerLink]="['/explore']">Explore</a></li>
+            <li><a href="#">Setting</a></li>
+        </ul>
+    </div>
+</nav>
+<router-outlet></router-outlet>
+

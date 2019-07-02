@@ -1,0 +1,17 @@
+<form loginFrom="ngFrom" (submit)="loginUser($event)" class="col s12 white">
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="text" #username ngModel name="UserName" placeholder="Username" required >
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="password" #password ngModel name="Password" placeholder="Password" required >
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12">
+            <button  class="btn-large btn-submit" type="submit" (click)="checkUser(username,password)" >Login</button>
+        </div>
+    </div>
+</form>

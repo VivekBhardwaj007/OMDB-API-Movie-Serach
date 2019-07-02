@@ -1,0 +1,26 @@
+<h1>Search Movie Name</h1>
+<label>Movie Title</label>
+<input  [(ngModel)]="title" placeholder="batman" class="form-control" />
+<button (click)="searchMovie(title)" class="btn btn-primary btn-block">Search</button>
+<div class="row">
+    <div class="col s3">
+        <div class="card">
+            <div class="card-image">
+                <ul>
+                    <li *ngFor="let movie of result.Search">
+                       <a [routerLink]="['/movie']" [queryParams]="{ movieId:movie.imdbID }"><img src="{{ movie.Poster }}"> </a>
+                        <div class="card-image">
+                            <span class="card-title">{{ movie.Title }}</span>
+                        </div>
+                        <div class="card-content">
+                            Type : {{ movie.Type }} <br>
+                            Year : {{ movie.Year }}<br>
+                            IMDBID : {{ movie.imdbID }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
